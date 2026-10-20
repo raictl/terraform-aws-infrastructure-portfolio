@@ -24,3 +24,8 @@ variable "project_name" {
   type        = string
 }
 
+variable "enable_nat_gateway" {
+  description = "Whether to create a NAT gateway for outbound internet access from application subnets"
+  type        = bool
+  default     = true
+}

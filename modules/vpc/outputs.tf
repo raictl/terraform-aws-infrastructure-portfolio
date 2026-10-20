@@ -25,8 +25,8 @@ output "availability_zones" {
 }
 
 output "nat_gateway_id" {
-  description = "ID of the NAT Gateway"
-  value       = aws_nat_gateway.this.id
+  description = "ID of the NAT gateway, or null when disabled"
+  value       = var.enable_nat_gateway ? aws_nat_gateway.this[0].id : null
 }
 
 output "internet_gateway_id" {

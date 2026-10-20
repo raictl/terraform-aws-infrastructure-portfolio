@@ -5,6 +5,7 @@ module "vpc" {
   availability_zones = var.availability_zones
   environment        = var.environment
   project_name       = var.project_name
+  enable_nat_gateway = true
 }
 
 module "security" {
